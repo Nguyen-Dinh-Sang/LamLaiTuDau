@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using CleanArchitecture.Application.Interfaces;
 using CleanArchitecture.Application.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchitectur.MVC.Controllers
 {
+    [Authorize]
     public class NguoiDungController : Controller
     {
         private INguoiDungService iNguoiDungService;

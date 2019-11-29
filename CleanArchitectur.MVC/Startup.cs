@@ -12,6 +12,8 @@ using CleanArchitectur.MVC.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using CleanArchitecture.Data.Context;
+using CleanArchitecture.IoC;
 
 namespace CleanArchitectur.MVC
 {
@@ -34,6 +36,14 @@ namespace CleanArchitectur.MVC
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            // thêm
+            services.AddDbContext<WebEnglishDBContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("WebEnglishDBConnection"));
+            });
+
+            RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,6 +75,11 @@ namespace CleanArchitectur.MVC
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+        }
+
+        private static void RegisterServices(IServiceCollection services)
+        {
+            DependencyContainer.RegisterServices(services);
         }
     }
 }

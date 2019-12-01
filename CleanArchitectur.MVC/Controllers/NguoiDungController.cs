@@ -24,5 +24,70 @@ namespace CleanArchitectur.MVC.Controllers
             NguoiDungViewModel model = iNguoiDungService.GetNguoiDungs();
             return View(model.NguoiDungs);
         }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(SaveNguoiDung save)
+        {
+            if (ModelState.IsValid)
+            {
+                save.Id = 0;
+                iNguoiDungService.Create(save);
+                return RedirectToAction("Index");
+            }
+            return View(save);
+        }
+
+        //[Route("NguoiDung/Delete/{maUser}")]
+
+        [HttpGet]
+        public IActionResult Delete(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirm(int? Id)
+        {
+            iNguoiDungService.remove(Id);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                var nguoiDung = iNguoiDungService.GetNguoiDung(Id);
+                return View(nguoiDung);
+            }
+        }
+
+        [HttpPost, ActionName("Edit")]
+        public IActionResult EditConfirm(SaveNguoiDung save)
+        {
+            if (ModelState.IsValid)
+            {
+                iNguoiDungService.Create(save);
+                return RedirectToAction("Index");
+            }
+            return View(save);
+        }
     }
 }

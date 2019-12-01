@@ -155,3 +155,8 @@ C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitectur.MVC\bi
 C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\NguoiDung\Index.cshtml.g.cs
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitectur.MVC\bin\Debug\netcoreapp3.0\AutoMapper.dll
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\NguoiDung\Create.cshtml.g.cs
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitectur.MVC\bin\Debug\netcoreapp3.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\NguoiDung\Delete.cshtml.g.cs
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\NguoiDung\Edit.cshtml.g.cs

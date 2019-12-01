@@ -15,9 +15,37 @@ namespace CleanArchitecture.Data.Repository
         {
             this.webEnglishDBContext = webEnglishDBContext;
         }
+
+        public void Add(NguoiDung nguoi)
+        {
+            if(nguoi.Id == 0)
+            {
+                webEnglishDBContext.NguoiDung.Add(nguoi);
+                webEnglishDBContext.SaveChanges();
+            } else
+            {
+                NguoiDung findResults = webEnglishDBContext.NguoiDung.Find(nguoi.Id);
+                findResults.TenNguoiDung = nguoi.TenNguoiDung;
+                webEnglishDBContext.SaveChanges();
+            }
+        }
+
+        public NguoiDung GetNguoiDung(int? iD)
+        {
+            NguoiDung findResults = webEnglishDBContext.NguoiDung.Find(iD);
+            return findResults;
+        }
+
         public IEnumerable<NguoiDung> GetNguoiDungs()
         {
             return webEnglishDBContext.NguoiDung;
+        }
+
+        public void Remove(int? id)
+        {
+            NguoiDung findResults = webEnglishDBContext.NguoiDung.Find(id);
+            webEnglishDBContext.Remove(findResults);
+            webEnglishDBContext.SaveChanges();
         }
     }
 }

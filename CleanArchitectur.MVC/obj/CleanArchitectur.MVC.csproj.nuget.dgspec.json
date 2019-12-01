@@ -30,9 +30,6 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Admin\\Desktop\\WEB\\LamLaiTuDau\\CleanArchitecture\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\WEB\\LamLaiTuDau\\CleanArchitecture\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj"
-              },
               "C:\\Users\\Admin\\Desktop\\WEB\\LamLaiTuDau\\CleanArchitecture\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj": {
                 "projectPath": "C:\\Users\\Admin\\Desktop\\WEB\\LamLaiTuDau\\CleanArchitecture\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj"
               }
@@ -139,6 +136,12 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -342,6 +345,10 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[3.0.1, )"

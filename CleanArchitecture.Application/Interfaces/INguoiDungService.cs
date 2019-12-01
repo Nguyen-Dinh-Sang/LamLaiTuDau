@@ -8,5 +8,12 @@ namespace CleanArchitecture.Application.Interfaces
     public interface INguoiDungService
     {
         NguoiDungViewModel GetNguoiDungs();
+
+        void Create(SaveNguoiDung save);
+
+        void remove(int? id);
+
+        SaveNguoiDung GetNguoiDung(int? iD);
+
     }
 }

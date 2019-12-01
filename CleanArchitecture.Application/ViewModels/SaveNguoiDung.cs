@@ -3,14 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace CleanArchitecture.Domain.Models
+namespace CleanArchitecture.Application.ViewModels
 {
-    public class NguoiDung
+    public class SaveNguoiDung
     {
-        //public NguoiDung()
-        //{
-          //  ThamGiaChuDe = new HashSet<ThamGiaChuDe>();
-        //}
         [Key]
         public int Id { get; set; }
         public string TenNguoiDung { get; set; }
@@ -20,7 +16,5 @@ namespace CleanArchitecture.Domain.Models
         public string SoDienThoai { get; set; }
         public string Gmail { get; set; }
         public int? VaiTro { get; set; }
-
-        //public virtual ICollection<ThamGiaChuDe> ThamGiaChuDe { get; set; }
     }
 }
